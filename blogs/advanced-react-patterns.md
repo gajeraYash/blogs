@@ -13,7 +13,7 @@ As React applications grow in complexity, it becomes crucial to implement advanc
 
 The compound components pattern allows you to create components that work together to form a complete UI element, similar to HTML's `<select>` and `<option>` elements.
 
-\`\`\`jsx
+```jsx
 // Accordion component using compound pattern
 const Accordion = ({ children, ...props }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -45,13 +45,13 @@ const AccordionItem = ({ children, isOpen, onToggle, title }) => (
   <AccordionItem title="Section 1">Content 1</AccordionItem>
   <AccordionItem title="Section 2">Content 2</AccordionItem>
 </Accordion>
-\`\`\`
+```
 
 ## 2. Render Props Pattern
 
 Render props is a technique for sharing code between React components using a prop whose value is a function.
 
-\`\`\`jsx
+```jsx
 const DataFetcher = ({ url, render }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -82,13 +82,13 @@ const DataFetcher = ({ url, render }) => {
     return <UserList users={data} />;
   }}
 />
-\`\`\`
+```
 
 ## 3. Custom Hooks Pattern
 
 Custom hooks allow you to extract component logic into reusable functions.
 
-\`\`\`jsx
+```jsx
 // Custom hook for API calls
 const useApi = (url) => {
   const [data, setData] = useState(null);
@@ -124,13 +124,13 @@ const UserProfile = ({ userId }) => {
   
   return <div>{user.name}</div>;
 };
-\`\`\`
+```
 
 ## 4. Higher-Order Components (HOCs)
 
 HOCs are functions that take a component and return a new component with additional props or behavior.
 
-\`\`\`jsx
+```jsx
 const withAuth = (WrappedComponent) => {
   return (props) => {
     const { user, loading } = useAuth();
@@ -146,13 +146,13 @@ const withAuth = (WrappedComponent) => {
 const Dashboard = withAuth(({ user }) => (
   <div>Welcome, {user.name}!</div>
 ));
-\`\`\`
+```
 
 ## 5. Context + Reducer Pattern
 
 For complex state management, combine Context API with useReducer.
 
-\`\`\`jsx
+```jsx
 const AppContext = createContext();
 
 const appReducer = (state, action) => {
@@ -186,7 +186,7 @@ const useAppContext = () => {
   }
   return context;
 };
-\`\`\`
+```
 
 ## Best Practices
 
