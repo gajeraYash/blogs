@@ -152,25 +152,6 @@ Term 1
 Term 2
 :   Another definition.
 
-## Diagrams
-
-### Mermaid diagram (if supported)
-```mermaid
-flowchart TD
-  A[Start] --> B{Is it working?}
-  B -- Yes --> C[Celebrate]
-  B -- No  --> D[Debug]
-  D --> B
-```
-
-### PlantUML (example block - renderer dependent)
-```plantuml
-@startuml
-Alice -> Bob: Hello
-Bob --> Alice: Hi
-@enduml
-```
-
 ## HTML comments and raw HTML ignored by renderer
 
 <!-- This is an HTML comment and should not be displayed. -->
